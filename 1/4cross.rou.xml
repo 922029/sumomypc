@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <!-- 車両タイプの定義 -->
+    <vType id="car" accel="2.0" decel="4.5" sigma="0.5" length="5.0" maxSpeed="13.9" guiShape="passenger"/>
+
+    <!-- =========================================================
+         1. ルート定義 (LHT: 左側通行に基づき右折・左折を定義)
+         各入口(8つ)から全ての出口(7つ)へのルートを定義します。
+    ========================================================== -->
+    
+    <!-- === N1 入口から (N1_C1が始点) === -->
+    <route id="n1w1" edges="N1_C1 C1_W1"/>              <!-- 1. C1で右折 (短) -->
+    <route id="n1s1" edges="N1_C1 C1_C3 C3_S1"/>        <!-- 2. C1直進、C3で直進 -->
+    <route id="n1e1" edges="N1_C1 C1_C2 C2_E1"/>        <!-- 3. C1直進、C2で左折 (長) -->
+    <route id="n1w2" edges="N1_C1 C1_C3 C3_W2"/>        <!-- 4. C1直進、C3で左折 (長) -->
+    <route id="n1e2" edges="N1_C1 C1_C3 C3_C4 C4_E2"/>  <!-- 5. C1, C3, C4を経由してE2へ -->
+    <route id="n1s2" edges="N1_C1 C1_C2 C2_C4 C4_S2"/>  <!-- 6. C1, C2, C4を経由してS2へ -->
+    <route id="n1n2" edges="N1_C1 C1_C2 C2_N2"/>        <!-- 7. C1直進、C2で右折 -->
+
+
+    <!-- === W1 入口から (W1_C1が始点) === -->
+    <route id="w1s1" edges="W1_C1 C1_C3 C3_S1"/>        <!-- 1. C1で右折 (短) -->
+    <route id="w1e1" edges="W1_C1 C1_C2 C2_E1"/>        <!-- 2. C1直進、C2で直進 -->
+    <route id="w1n1" edges="W1_C1 C1_N1"/>              <!-- 3. C1で左折 (長) -->
+    <route id="w1w2" edges="W1_C1 C1_C3 C3_W2"/>        <!-- 4. C1, C3を経由してW2へ -->
+    <route id="w1s2" edges="W1_C1 C1_C2 C2_C4 C4_S2"/>  <!-- 5. C1, C2, C4を経由してS2へ -->
+    <route id="w1n2" edges="W1_C1 C1_C2 C2_N2"/>        <!-- 6. C1, C2を経由してN2へ -->
+    <route id="w1e2" edges="W1_C1 C1_C2 C2_C4 C4_E2"/>  <!-- 7. C1, C2, C4を経由してE2へ -->
+    
+    <!-- === S1 入口から (S1_C3が始点) === -->
+    <route id="s1e2" edges="S1_C3 C3_C4 C4_E2"/>        <!-- 1. C3で右折 (短) -->
+    <route id="s1w2" edges="S1_C3 C3_W2"/>              <!-- 2. C3で左折 (長) -->
+    <route id="s1n1" edges="S1_C3 C3_C1 C1_N1"/>        <!-- 3. C3直進、C1で直進 -->
+    <route id="s1e1" edges="S1_C3 C3_C1 C1_C2 C2_E1"/>  <!-- 4. C3, C1, C2を経由してE1へ -->
+    <route id="s1n2" edges="S1_C3 C3_C4 C4_C2 C2_N2"/>  <!-- 5. C3, C4, C2を経由してN2へ -->
+    <route id="s1s2" edges="S1_C3 C3_C4 C4_S2"/>        <!-- 6. C3, C4を経由してS2へ -->
+    <route id="s1w1" edges="S1_C3 C3_C1 C1_W1"/>        <!-- 7. C3, C1を経由してW1へ -->
+
+    <!-- === E1 入口から (E1_C2が始点) === -->
+    <route id="e1n2" edges="E1_C2 C2_N2"/>              <!-- 1. C2で右折 (短) -->
+    <route id="e1s2" edges="E1_C2 C2_C4 C4_S2"/>        <!-- 2. C2で左折 (長) -->
+    <route id="e1w1" edges="E1_C2 C2_C1 C1_W1"/>        <!-- 3. C2直進、C1で直進 -->
+    <route id="e1n1" edges="E1_C2 C2_C1 C1_N1"/>        <!-- 4. C2, C1を経由してN1へ -->
+    <route id="e1w2" edges="E1_C2 C2_C1 C1_C3 C3_W2"/>  <!-- 5. C2, C1, C3を経由してW2へ -->
+    <route id="e1s1" edges="E1_C2 C2_C4 C4_C3 C3_S1"/>  <!-- 6. C2, C4, C3を経由してS1へ -->
+    <route id="e1e2" edges="E1_C2 C2_C4 C4_E2"/>        <!-- 7. C2, C4を経由してE2へ -->
+
+    <!-- === N2 入口から (N2_C2が始点) === -->
+    <route id="n2e1" edges="N2_C2 C2_E1"/>              <!-- 1. C2で右折 (短) -->
+    <route id="n2s2" edges="N2_C2 C2_C4 C4_S2"/>        <!-- 2. C2直進、C4で直進 -->
+    <route id="n2w1" edges="N2_C2 C2_C1 C1_W1"/>        <!-- 3. C2で左折 (長) -->
+    <route id="n2e2" edges="N2_C2 C2_C4 C4_E2"/>        <!-- 4. C2直進、C4で右折 -->
+    <route id="n2w2" edges="N2_C2 C2_C1 C1_C3 C3_W2"/>  <!-- 5. C2, C1, C3を経由してW2へ -->
+    <route id="n2s1" edges="N2_C2 C2_C4 C4_C3 C3_S1"/>  <!-- 6. C2, C4, C3を経由してS1へ -->
+    <route id="n2n1" edges="N2_C2 C2_C1 C1_N1"/>        <!-- 7. C2, C1を経由してN1へ -->
+
+    <!-- === W2 入口から (W2_C3が始点) === -->
+    <route id="w2s1" edges="W2_C3 C3_S1"/>              <!-- 1. C3で右折 (短) -->
+    <route id="w2e2" edges="W2_C3 C3_C4 C4_E2"/>        <!-- 2. C3直進、C4で直進 -->
+    <route id="w2n1" edges="W2_C3 C3_C1 C1_N1"/>        <!-- 3. C3で左折 (長) -->
+    <route id="w2e1" edges="W2_C3 C3_C4 C4_C2 C2_E1"/>  <!-- 4. C3, C4, C2を経由してE1へ -->
+    <route id="w2n2" edges="W2_C3 C3_C4 C4_C2 C2_N2"/>  <!-- 5. C3, C4, C2を経由してN2へ -->
+    <route id="w2s2" edges="W2_C3 C3_C4 C4_S2"/>        <!-- 6. C3, C4を経由してS2へ -->
+    <route id="w2w1" edges="W2_C3 C3_C1 C1_W1"/>        <!-- 7. C3, C1を経由してW1へ -->
+
+    <!-- === S2 入口から (S2_C4が始点) === -->
+    <route id="s2e2" edges="S2_C4 C4_E2"/>              <!-- 1. C4で右折 (短) -->
+    <route id="s2w2" edges="S2_C4 C4_C3 C3_W2"/>        <!-- 2. C4で左折 (長) -->
+    <route id="s2n2" edges="S2_C4 C4_C2 C2_N2"/>        <!-- 3. C4直進、C2で直進 -->
+    <route id="s2e1" edges="S2_C4 C4_C2 C2_E1"/>        <!-- 4. C4, C2を経由してE1へ -->
+    <route id="s2w1" edges="S2_C4 C4_C3 C3_C1 C1_W1"/>  <!-- 5. C4, C3, C1を経由してW1へ -->
+    <route id="s2n1" edges="S2_C4 C4_C2 C2_C1 C1_N1"/>  <!-- 6. C4, C2, C1を経由してN1へ -->
+    <route id="s2s1" edges="S2_C4 C4_C3 C3_S1"/>        <!-- 7. C4, C3を経由してS1へ -->
+
+    <!-- === E2 入口から (E2_C4が始点) === -->
+    <route id="e2n2" edges="E2_C4 C4_C2 C2_N2"/>        <!-- 1. C4で右折 (短) -->
+    <route id="e2s2" edges="E2_C4 C4_S2"/>              <!-- 2. C4で左折 (長) -->
+    <route id="e2w2" edges="E2_C4 C4_C3 C3_W2"/>        <!-- 3. C4直進、C3で直進 -->
+    <route id="e2n1" edges="E2_C4 C4_C2 C2_C1 C1_N1"/>  <!-- 4. C4, C2, C1を経由してN1へ -->
+    <route id="e2s1" edges="E2_C4 C4_C3 C3_S1"/>        <!-- 5. C4, C3を経由してS1へ -->
+    <route id="e2e1" edges="E2_C4 C4_C2 C2_E1"/>        <!-- 6. C4, C2を経由してE1へ -->
+    <route id="e2w1" edges="E2_C4 C4_C3 C3_C1 C1_W1"/>  <!-- 7. C4, C3, C1を経由してW1へ -->
+
+
+    <!-- =========================================================
+         2. 交通フロー定義 (3600秒間、各ルートで車両を発生)
+         全ルートに対してフローを定義します。交通量は既存ルートを参考に設定。
+    ========================================================== -->
+
+    <!-- N1 グループ: 北の入口1から (合計 500 -> 350台) -->
+    <flow id="N1W1" begin="0" end="3600" number="28" type="car" route="n1w1" departLane="best" departSpeed="max"/>
+    <flow id="N1S1" begin="0" end="3600" number="70" type="car" route="n1s1" departLane="best" departSpeed="max"/>
+    <flow id="N1E1" begin="0" end="3600" number="63" type="car" route="n1e1" departLane="best" departSpeed="max"/>
+    <flow id="N1W2" begin="0" end="3600" number="42" type="car" route="n1w2" departLane="best" departSpeed="max"/>
+    <flow id="N1E2" begin="0" end="3600" number="63" type="car" route="n1e2" departLane="best" departSpeed="max"/>
+    <flow id="N1S2" begin="0" end="3600" number="49" type="car" route="n1s2" departLane="best" departSpeed="max"/>
+    <flow id="N1N2" begin="0" end="3600" number="35" type="car" route="n1n2" departLane="best" departSpeed="max"/>
+
+    <!-- N2 グループ: 北の入口2から (合計 400 -> 280台) -->
+    <flow id="N2S2" begin="0" end="3600" number="18" type="car" route="n2s2" departLane="best" departSpeed="max"/>
+    <flow id="N2E1" begin="0" end="3600" number="32" type="car" route="n2e1" departLane="best" departSpeed="max"/>
+    <flow id="N2W1" begin="0" end="3600" number="45" type="car" route="n2w1" departLane="best" departSpeed="max"/>
+    <flow id="N2E2" begin="0" end="3600" number="45" type="car" route="n2e2" departLane="best" departSpeed="max"/>
+    <flow id="N2W2" begin="0" end="3600" number="45" type="car" route="n2w2" departLane="best" departSpeed="max"/>
+    <flow id="N2S1" begin="0" end="3600" number="63" type="car" route="n2s1" departLane="best" departSpeed="max"/>
+    <flow id="N2N1" begin="0" end="3600" number="32" type="car" route="n2n1" departLane="best" departSpeed="max"/>
+
+    <!-- W1 グループ: 西の入口1から (合計 1400 -> 980台) -->
+    <flow id="W1E1" begin="0" end="3600" number="233" type="car" route="w1e1" departLane="best" departSpeed="max"/>
+    <flow id="W1N1" begin="0" end="3600" number="122" type="car" route="w1n1" departLane="best" departSpeed="max"/>
+    <flow id="W1S1" begin="0" end="3600" number="224" type="car" route="w1s1" departLane="best" departSpeed="max"/>
+    <flow id="W1W2" begin="0" end="3600" number="182" type="car" route="w1w2" departLane="best" departSpeed="max"/>
+    <flow id="W1S2" begin="0" end="3600" number="122" type="car" route="w1s2" departLane="best" departSpeed="max"/>
+    <flow id="W1N2" begin="0" end="3600" number="70" type="car" route="w1n2" departLane="best" departSpeed="max"/>
+    <flow id="W1E2" begin="0" end="3600" number="188" type="car" route="w1e2" departLane="best" departSpeed="max"/>
+
+    <!-- W2 グループ: 西の入口2から (合計 1200 -> 840台) -->
+    <flow id="W2E2" begin="0" end="3600" number="210" type="car" route="w2e2" departLane="best" departSpeed="max"/>
+    <flow id="W2N1" begin="0" end="3600" number="77" type="car" route="w2n1" departLane="best" departSpeed="max"/>
+    <flow id="W2S1" begin="0" end="3600" number="133" type="car" route="w2s1" departLane="best" departSpeed="max"/>
+    <flow id="W2E1" begin="0" end="3600" number="105" type="car" route="w2e1" departLane="best" departSpeed="max"/>
+    <flow id="W2N2" begin="0" end="3600" number="161" type="car" route="w2n2" departLane="best" departSpeed="max"/>
+    <flow id="W2S2" begin="0" end="3600" number="77" type="car" route="w2s2" departLane="best" departSpeed="max"/>
+    <flow id="W2W1" begin="0" end="3600" number="77" type="car" route="w2w1" departLane="best" departSpeed="max"/>
+
+    <!-- S1 グループ: 南の入口1から (合計 300 -> 210台) -->
+    <flow id="S1N1" begin="0" end="3600" number="25" type="car" route="s1n1" departLane="best" departSpeed="max"/>
+    <flow id="S1E2" begin="0" end="3600" number="45" type="car" route="s1e2" departLane="best" departSpeed="max"/>
+    <flow id="S1W2" begin="0" end="3600" number="38" type="car" route="s1w2" departLane="best" departSpeed="max"/>
+    <flow id="S1E1" begin="0" end="3600" number="35" type="car" route="s1e1" departLane="best" departSpeed="max"/>
+    <flow id="S1N2" begin="0" end="3600" number="45" type="car" route="s1n2" departLane="best" departSpeed="max"/>
+    <flow id="S1S2" begin="0" end="3600" number="25" type="car" route="s1s2" departLane="best" departSpeed="max"/>
+    <flow id="S1W1" begin="0" end="3600" number="27" type="car" route="s1w1" departLane="best" departSpeed="max"/>
+
+    <!-- S2 グループ: 南の入口2から (合計 600 -> 420台) -->
+    <flow id="S2N2" begin="0" end="3600" number="95" type="car" route="s2n2" departLane="best" departSpeed="max"/>
+    <flow id="S2W2" begin="0" end="3600" number="40" type="car" route="s2w2" departLane="best" departSpeed="max"/>
+    <flow id="S2E2" begin="0" end="3600" number="82" type="car" route="s2e2" departLane="best" departSpeed="max"/>
+    <flow id="S2E1" begin="0" end="3600" number="67" type="car" route="s2e1" departLane="best" departSpeed="max"/>
+    <flow id="S2W1" begin="0" end="3600" number="34" type="car" route="s2w1" departLane="best" departSpeed="max"/>
+    <flow id="S2N1" begin="0" end="3600" number="34" type="car" route="s2n1" departLane="best" departSpeed="max"/>
+    <flow id="S2S1" begin="0" end="3600" number="68" type="car" route="s2s1" departLane="best" departSpeed="max"/>
+
+    <!-- E1 グループ: 東の入口1から (合計 1400 -> 980台) -->
+    <flow id="E1W1" begin="0" end="3600" number="283" type="car" route="e1w1" departLane="best" departSpeed="max"/>
+    <flow id="E1S2" begin="0" end="3600" number="61" type="car" route="e1s2" departLane="best" departSpeed="max"/>
+    <flow id="E1N2" begin="0" end="3600" number="239" type="car" route="e1n2" departLane="best" departSpeed="max"/>
+    <flow id="E1N1" begin="0" end="3600" number="119" type="car" route="e1n1" departLane="best" departSpeed="max"/>
+    <flow id="E1W2" begin="0" end="3600" number="100" type="car" route="e1w2" departLane="best" departSpeed="max"/>
+    <flow id="E1S1" begin="0" end="3600" number="80" type="car" route="e1s1" departLane="best" departSpeed="max"/>
+    <flow id="E1E2" begin="0" end="3600" number="83" type="car" route="e1e2" departLane="best" departSpeed="max"/>
+
+    <!-- E2 グループ: 東の入口2から (合計 1100 -> 770台) -->
+    <flow id="E2W2" begin="0" end="3600" number="171" type="car" route="e2w2" departLane="best" departSpeed="max"/>
+    <flow id="E2N2" begin="0" end="3600" number="171" type="car" route="e2n2" departLane="best" departSpeed="max"/>
+    <flow id="E2S2" begin="0" end="3600" number="48" type="car" route="e2s2" departLane="best" departSpeed="max"/>
+    <flow id="E2N1" begin="0" end="3600" number="90" type="car" route="e2n1" departLane="best" departSpeed="max"/>
+    <flow id="E2S1" begin="0" end="3600" number="83" type="car" route="e2s1" departLane="best" departSpeed="max"/>
+    <flow id="E2E1" begin="0" end="3600" number="124" type="car" route="e2e1" departLane="best" departSpeed="max"/>
+    <flow id="E2W1" begin="0" end="3600" number="83" type="car" route="e2w1" departLane="best" departSpeed="max"/>
+
+</routes>

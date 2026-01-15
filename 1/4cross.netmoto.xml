@@ -339,122 +339,46 @@
     </edge>
 
     <tlLogic id="C1" type="static" programID="0" offset="0">
-            <!-- Phase 0: 南北 直進左折(青) 76秒 -->
-            <phase duration="76" state="GGgrrrGGgrrr"/>
-            <!-- Phase 1: 南北 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="yyyrrryyyrrr"/>
-            <!-- Phase 2: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-            
-            <!-- Phase 3: 南北 右折(青) 14秒 -->
-            <phase duration="14" state="rrGrrrrrGrrr"/>
-            <!-- Phase 4: 南北 右折(黄) 3秒 -->
-            <phase duration="3"  state="rryrrrrryrrr"/>
-            <!-- Phase 5: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 6: 東西 直進左折(青) 76秒 -->
-            <phase duration="76" state="rrrGGgrrrGGg"/>
-            <!-- Phase 7: 東西 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="rrryyyrrryyy"/>
-            <!-- Phase 8: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 9: 東西 右折(青) 14秒 -->
-            <phase duration="14" state="rrrrrGrrrrrG"/>
-            <!-- Phase 10: 東西 右折(黄) 3秒 -->
-            <phase duration="3"  state="rrrrryrrrrry"/>
-            <!-- Phase 11: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
+        <phase duration="33" state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yygrrryygrrr"/>
+        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="3"  state="rryrrrrryrrr"/>
+        <phase duration="33" state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryygrrryyg"/>
+        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
     <tlLogic id="C2" type="static" programID="0" offset="0">
-            <!-- Phase 0: 南北 直進左折(青) 76秒 -->
-            <phase duration="76" state="GGgrrrGGgrrr"/>
-            <!-- Phase 1: 南北 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="yyyrrryyyrrr"/>
-            <!-- Phase 2: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-            
-            <!-- Phase 3: 南北 右折(青) 14秒 -->
-            <phase duration="14" state="rrGrrrrrGrrr"/>
-            <!-- Phase 4: 南北 右折(黄) 3秒 -->
-            <phase duration="3"  state="rryrrrrryrrr"/>
-            <!-- Phase 5: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 6: 東西 直進左折(青) 76秒 -->
-            <phase duration="76" state="rrrGGgrrrGGg"/>
-            <!-- Phase 7: 東西 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="rrryyyrrryyy"/>
-            <!-- Phase 8: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 9: 東西 右折(青) 14秒 -->
-            <phase duration="14" state="rrrrrGrrrrrG"/>
-            <!-- Phase 10: 東西 右折(黄) 3秒 -->
-            <phase duration="3"  state="rrrrryrrrrry"/>
-            <!-- Phase 11: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
+        <phase duration="33" state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yygrrryygrrr"/>
+        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="3"  state="rryrrrrryrrr"/>
+        <phase duration="33" state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryygrrryyg"/>
+        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
     <tlLogic id="C3" type="static" programID="0" offset="0">
-            <!-- Phase 0: 南北 直進左折(青) 76秒 -->
-            <phase duration="76" state="GGgrrrGGgrrr"/>
-            <!-- Phase 1: 南北 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="yyyrrryyyrrr"/>
-            <!-- Phase 2: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-            
-            <!-- Phase 3: 南北 右折(青) 14秒 -->
-            <phase duration="14" state="rrGrrrrrGrrr"/>
-            <!-- Phase 4: 南北 右折(黄) 3秒 -->
-            <phase duration="3"  state="rryrrrrryrrr"/>
-            <!-- Phase 5: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 6: 東西 直進左折(青) 76秒 -->
-            <phase duration="76" state="rrrGGgrrrGGg"/>
-            <!-- Phase 7: 東西 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="rrryyyrrryyy"/>
-            <!-- Phase 8: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 9: 東西 右折(青) 14秒 -->
-            <phase duration="14" state="rrrrrGrrrrrG"/>
-            <!-- Phase 10: 東西 右折(黄) 3秒 -->
-            <phase duration="3"  state="rrrrryrrrrry"/>
-            <!-- Phase 11: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
+        <phase duration="33" state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yygrrryygrrr"/>
+        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="3"  state="rryrrrrryrrr"/>
+        <phase duration="33" state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryygrrryyg"/>
+        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
     <tlLogic id="C4" type="static" programID="0" offset="0">
-            <!-- Phase 0: 南北 直進左折(青) 76秒 -->
-            <phase duration="76" state="GGgrrrGGgrrr"/>
-            <!-- Phase 1: 南北 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="yyyrrryyyrrr"/>
-            <!-- Phase 2: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-            
-            <!-- Phase 3: 南北 右折(青) 14秒 -->
-            <phase duration="14" state="rrGrrrrrGrrr"/>
-            <!-- Phase 4: 南北 右折(黄) 3秒 -->
-            <phase duration="3"  state="rryrrrrryrrr"/>
-            <!-- Phase 5: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 6: 東西 直進左折(青) 76秒 -->
-            <phase duration="76" state="rrrGGgrrrGGg"/>
-            <!-- Phase 7: 東西 直進左折(黄) 3秒 -->
-            <phase duration="3"  state="rrryyyrrryyy"/>
-            <!-- Phase 8: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
-
-            <!-- Phase 9: 東西 右折(青) 14秒 -->
-            <phase duration="14" state="rrrrrGrrrrrG"/>
-            <!-- Phase 10: 東西 右折(黄) 3秒 -->
-            <phase duration="3"  state="rrrrryrrrrry"/>
-            <!-- Phase 11: 全赤 2秒 (追加) -->
-            <phase duration="2"  state="rrrrrrrrrrrr"/>
+        <phase duration="33" state="GGgrrrGGgrrr"/>
+        <phase duration="3"  state="yygrrryygrrr"/>
+        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="3"  state="rryrrrrryrrr"/>
+        <phase duration="33" state="rrrGGgrrrGGg"/>
+        <phase duration="3"  state="rrryygrrryyg"/>
+        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="3"  state="rrrrryrrrrry"/>
     </tlLogic>
-    
+
     <junction id="C1" type="traffic_light" x="300.01" y="300.01" incLanes="N1_C1_0 N1_C1_1 N1_C1_2 C2_C1_0 C2_C1_1 C2_C1_2 C3_C1_0 C3_C1_1 C3_C1_2 W1_C1_0 W1_C1_1 W1_C1_2" intLanes=":C1_0_0 :C1_1_0 :C1_12_0 :C1_3_0 :C1_4_0 :C1_13_0 :C1_6_0 :C1_7_0 :C1_14_0 :C1_9_0 :C1_10_0 :C1_15_0" shape="290.41,287.41 309.61,287.41 309.94,289.08 310.36,289.66 310.94,290.08 311.69,290.33 312.61,290.41 312.61,309.61 310.94,309.94 310.36,310.36 309.94,310.94 309.69,311.69 309.61,312.61 290.41,312.61 290.08,310.94 289.66,310.36 289.08,309.94 288.33,309.69 287.41,309.61 287.41,290.41 289.08,290.08 289.66,289.66 290.08,289.08 290.33,288.33" radius="3.00">
         <request index="0"  response="000000000000" foes="000100010000" cont="0"/>
         <request index="1"  response="100000100000" foes="111100110000" cont="0"/>
